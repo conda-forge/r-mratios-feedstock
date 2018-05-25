@@ -1,4 +1,4 @@
-{% set version = '1.3.17' %}
+{% set version = "1.4.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/mratios_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/mratios/mratios_{{ version }}.tar.gz
-  sha256: 852a9649fb1e50956db4764ce54c868c57dc119faf2fac66a425663204b15728
+  sha256: f8374a74ac1ed2c0b8f474052daad48134fb228f1f3f3ebde777fa3f3ae64c5e
 
 build:
   number: 0
