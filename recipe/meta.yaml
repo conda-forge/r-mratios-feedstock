@@ -1,5 +1,4 @@
-{% set version = "1.4.0" %}
-
+{% set version = '1.4.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +9,12 @@ package:
 source:
   fn: mratios_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/mratios_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/mratios/mratios_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/mratios_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/mratios/mratios_{{ version }}.tar.gz
   sha256: f8374a74ac1ed2c0b8f474052daad48134fb228f1f3f3ebde777fa3f3ae64c5e
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
   rpaths:
@@ -23,38 +23,41 @@ build:
 
 requirements:
   build:
+  host:
     - r-base
     - r-mvtnorm
-
   run:
     - r-base
     - r-mvtnorm
 
 test:
   commands:
-    - $R -e "library('mratios')"  # [not win]
+    - $R -e "library('mratios')"           # [not win]
     - "\"%R%\" -e \"library('mratios')\""  # [win]
 
 about:
   home: https://CRAN.R-project.org/package=mratios
-  license: GPL2 and GPL3
-  summary: With this package, it is possible to perform (simultaneous) inferences for ratios
-    of linear combinations of coefficients in the general linear model. In particular,
-    tests and confidence interval estimations for ratios of treatment means in the normal
-    one-way layout and confidence interval estimations like in (multiple) slope ratio
-    and parallel line assays can be carried out. Moreover, it is possible to calculate
-    the sample sizes required in comparisons with a control based on relative margins.
-    For the simple two-sample problem, functions for a t-test for ratio-formatted hypotheses
-    and the corresponding Fieller-type confidence interval are provided assuming homogeneous
+  license: GPL-2
+  summary: Performs (simultaneous) inferences for ratios of linear combinations of coefficients
+    in the general linear model. Multiple comparisons and simultaneous confidence interval
+    estimations can be performed for ratios of treatment means in the normal one-way
+    layout with homogeneous and heterogeneous treatment variances, according to Dilba
+    et al. (2007) <https://cran.r-project.org/doc/Rnews/Rnews_2007-1.pdf> and Hasler
+    and Hothorn (2008) <doi:10.1002/bimj.200710466>. Confidence interval estimations
+    for ratios of linear combinations of linear model parameters like in (multiple)
+    slope ratio and parallel line assays can be carried out. Moreover, it is possible
+    to calculate the sample sizes required in comparisons with a control based on relative
+    margins. For the simple two-sample problem, functions for a t-test for ratio-formatted
+    hypotheses and the corresponding confidence interval are provided assuming homogeneous
     or heterogeneous group variances.
-  license_family: GPL
+  license_family: GPL2
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
   license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
 
 extra:
   recipe-maintainers:
-    - cbrueffer
     - johanneskoester
     - bgruening
     - daler
     - jdblischak
+    - cbrueffer
