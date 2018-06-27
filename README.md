@@ -3,25 +3,27 @@ About r-mratios
 
 Home: https://CRAN.R-project.org/package=mratios
 
-Package license: GPL2 and GPL3
+Package license: GPL-2
 
 Feedstock license: BSD 3-Clause
 
-Summary: With this package, it is possible to perform (simultaneous) inferences for ratios of linear combinations of coefficients in the general linear model. In particular, tests and confidence interval estimations for ratios of treatment means in the normal one-way layout and confidence interval estimations like in (multiple) slope ratio and parallel line assays can be carried out. Moreover, it is possible to calculate the sample sizes required in comparisons with a control based on relative margins. For the simple two-sample problem, functions for a t-test for ratio-formatted hypotheses and the corresponding Fieller-type confidence interval are provided assuming homogeneous or heterogeneous group variances.
+Summary: Performs (simultaneous) inferences for ratios of linear combinations of coefficients in the general linear model. Multiple comparisons and simultaneous confidence interval estimations can be performed for ratios of treatment means in the normal one-way layout with homogeneous and heterogeneous treatment variances, according to Dilba et al. (2007) <https://cran.r-project.org/doc/Rnews/Rnews_2007-1.pdf> and Hasler and Hothorn (2008) <doi:10.1002/bimj.200710466>. Confidence interval estimations for ratios of linear combinations of linear model parameters like in (multiple) slope ratio and parallel line assays can be carried out. Moreover, it is possible to calculate the sample sizes required in comparisons with a control based on relative margins. For the simple two-sample problem, functions for a t-test for ratio-formatted hypotheses and the corresponding confidence interval are provided assuming homogeneous or heterogeneous group variances.
 
 
 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-mratios-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-mratios-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-mratios-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-mratios-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-mratios-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-mratios-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-mratios-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-mratios-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-mratios-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-mratios-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-mratios-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-mratios-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-mratios/badges/version.svg)](https://anaconda.org/conda-forge/r-mratios)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-mratios/badges/downloads.svg)](https://anaconda.org/conda-forge/r-mratios)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--mratios-green.svg)](https://anaconda.org/conda-forge/r-mratios) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-mratios.svg)](https://anaconda.org/conda-forge/r-mratios) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-mratios.svg)](https://anaconda.org/conda-forge/r-mratios) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-mratios.svg)](https://anaconda.org/conda-forge/r-mratios) |
 
 Installing r-mratios
 ====================
