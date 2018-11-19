@@ -14,9 +14,9 @@ source:
   sha256: f8374a74ac1ed2c0b8f474052daad48134fb228f1f3f3ebde777fa3f3ae64c5e
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
-  skip: true  # [win32]
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -51,8 +51,7 @@ about:
     hypotheses and the corresponding confidence interval are provided assuming homogeneous
     or heterogeneous group variances.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
