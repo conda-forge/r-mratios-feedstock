@@ -1,11 +1,11 @@
-About r-mratios
-===============
+About r-mratios-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mratios-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=mratios
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mratios-feedstock/blob/main/LICENSE.txt)
 
 Summary: Performs (simultaneous) inferences for ratios of linear combinations of coefficients in the general linear model. Multiple comparisons and simultaneous confidence interval estimations can be performed for ratios of treatment means in the normal one-way layout with homogeneous and heterogeneous treatment variances, according to Dilba et al. (2007) <https://cran.r-project.org/doc/Rnews/Rnews_2007-1.pdf> and Hasler and Hothorn (2008) <doi:10.1002/bimj.200710466>. Confidence interval estimations for ratios of linear combinations of linear model parameters like in (multiple) slope ratio and parallel line assays can be carried out. Moreover, it is possible to calculate the sample sizes required in comparisons with a control based on relative margins. For the simple two-sample problem, functions for a t-test for ratio-formatted hypotheses and the corresponding confidence interval are provided assuming homogeneous or heterogeneous group variances.
 
